@@ -1,0 +1,26 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/bonythomas
+    except:
+    owner: ubuntu
+    group: ubuntu
+permissions:
+  - object: /var/www/bonythomas
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - directory
+  - object: /var/www/bonythomas
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - file
+
+hooks:
+  ApplicationStart:
+    - location: scripts/restart_service.sh
+      timeout: 30
+      runas: root
