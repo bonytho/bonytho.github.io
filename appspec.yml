@@ -2,18 +2,18 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/bonythomas
+    destination: /var/www/bonythomas.me
     except:
     owner: ubuntu
     group: ubuntu
 permissions:
-  - object: /var/www/bonythomas
+  - object: /var/www/bonythomas.me
     owner: ubuntu
     group: ubuntu
     mode: 755
     type:
       - directory
-  - object: /var/www/bonythomas
+  - object: /var/www/bonythomas.me
     owner: ubuntu
     group: ubuntu
     type:
